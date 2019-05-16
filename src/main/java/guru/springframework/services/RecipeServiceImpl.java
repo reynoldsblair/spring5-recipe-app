@@ -28,7 +28,7 @@ public class RecipeServiceImpl implements RecipeService {
                              RecipeToRecipeCommand recipeToRecipeCommand) {
         this.recipeRepository = recipeRepository;
         this.recipeCommandToRecipe = recipeCommandToRecipe;
-        this.recipeToRecipeCommand =recipeToRecipeCommand;
+        this.recipeToRecipeCommand = recipeToRecipeCommand;
     }
 
     @Override
