@@ -21,7 +21,6 @@ import static org.mockito.Mockito.*;
 public class UnitOfMeasureServiceImplTest {
 
     UnitOfMeasureToUnitOfMeasureCommand unitOfMeasureToUnitOfMeasureCommand = new UnitOfMeasureToUnitOfMeasureCommand();
-
     UnitOfMeasureService service;
 
     @Mock
@@ -35,7 +34,7 @@ public class UnitOfMeasureServiceImplTest {
     }
 
     @Test
-    public void listAllUoms() {
+    public void listAllUoms() throws Exception {
         //given
         Set<UnitOfMeasure> unitOfMeasures = new HashSet<>();
         UnitOfMeasure uom1 = new UnitOfMeasure();
@@ -55,4 +54,5 @@ public class UnitOfMeasureServiceImplTest {
         assertEquals(2, commands.size());
         verify(unitOfMeasureRepository, times(1)).findAll();
     }
+
 }
